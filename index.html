@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AgentSearch Workshop at SIGIR 2026 - The First Workshop on Indexing, Retrieval, and Ranking of AI Agents in Melbourne, Australia">
+    <meta name="keywords" content="AI agents, information retrieval, SIGIR, workshop, agent search, ranking, indexing">
+    <meta name="author" content="AgentSearch Workshop Organizers">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AgentSearch Workshop @ SIGIR 2026">
+    <meta property="og:description" content="The First Workshop on Indexing, Retrieval, and Ranking of AI Agents">
+    <meta property="og:url" content="https://yourusername.github.io/agentsearch-sigir26/">
+    <meta property="og:image" content="https://yourusername.github.io/agentsearch-sigir26/assets/img/logo.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AgentSearch Workshop @ SIGIR 2026">
+    <meta name="twitter:description" content="The First Workshop on Indexing, Retrieval, and Ranking of AI Agents">
+    
+    <!-- Favicon placeholder -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    
+    <title>AgentSearch Workshop @ SIGIR 2026</title>
+    
+    <!-- Google Fonts (optional but lightweight) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <header class="header">
+        <nav class="nav" id="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="#home">AgentSearch</a>
+                </div>
+                
+                <!-- Hamburger Menu Button -->
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                
+                <!-- Navigation Menu -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#topics" class="nav-link">Topics</a></li>
+                    <li><a href="#program" class="nav-link">Program</a></li>
+                    <li><a href="#speakers" class="nav-link">Speakers</a></li>
+                    <li><a href="#cfp" class="nav-link">Submissions</a></li>
+                    <li><a href="#challenge" class="nav-link">Challenge</a></li>
+                    <li><a href="#organizers" class="nav-link">Organizers</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="section hero">
+            <div class="hero-background"></div>
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">AgentSearch</h1>
+                    <h2 class="hero-subtitle">The First Workshop on Indexing, Retrieval, and Ranking of AI Agents</h2>
+                    <p class="hero-conference">SIGIR 2026 · Melbourne | Naarm, Australia · July 24, 2026</p>
+                    <div class="hero-buttons">
+                        <a href="#cfp" class="btn btn-primary" style="font-weight:700;">Call for Papers</a>
+                        <a href="#challenge" class="btn btn-secondary" style="font-weight:700;">Challenge</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About</h2>
+                <div class="section-content">
+                    <p>As AI agents and tools increasingly perform tasks on behalf of users, the digital ecosystem is rapidly filling with dynamic, task-oriented systems that offer overlapping capabilities. This shift raises a fundamental question: how can users and orchestrating systems reliably discover, compare, and select the most appropriate agents for a given task? AgentSearch frames this challenge as a first-class information retrieval problem. Unlike traditional IR, where static documents are retrieved, agent search involves dynamic entities whose suitability depends on capabilities, behavior, reliability, constraints, and task-dependent performance. This workshop brings together researchers and practitioners to develop principled methods for indexing, retrieving, ranking, and evaluating AI agents and tools, establishing a coherent research agenda at the intersection of information retrieval and agentic systems.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Topics Section -->
+        <section id="topics" class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">Topics of Interest</h2>
+                <div class="topics-grid">
+                    <div class="topic-card">
+                        <h3>Representation & Discovery of Agents</h3>
+                        <ul>
+                            <li>Modeling and structuring agent capabilities, constraints, and costs</li>
+                            <li>Profiling, probing, and capacity estimation of agents and tools</li>
+                            <li>Organization and indexing of dynamic or behavior-based properties</li>
+                            <li>Agent and tool discovery in large, heterogeneous ecosystems</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <h3>Retrieval, Ranking & Recommendation</h3>
+                        <ul>
+                            <li>Learning-to-rank methods for agent selection</li>
+                            <li>Task-aware, constraint-aware, and reliability-aware ranking</li>
+                            <li>Agent recommendation and proactive suggestion mechanisms</li>
+                            <li>Multi-agent routing, orchestration, and coordination</li>
+                            <li>Hybrid and ensemble retrieval strategies</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <h3>Evaluation & Benchmarking</h3>
+                        <ul>
+                            <li>Metrics for agent suitability, robustness, and performance</li>
+                            <li>Task-dependent and workflow-aware evaluation protocols</li>
+                            <li>Benchmark and dataset construction for agent search</li>
+                            <li>LLM-based, human-centered, or preference-based evaluation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="topic-card">
+                        <h3>Responsible & Human-Centered Agent Search</h3>
+                        <ul>
+                            <li>Safety, robustness, and risk mitigation in agent retrieval</li>
+                            <li>Fairness and exposure in agent marketplaces and rankings</li>
+                            <li>Transparency and explainability of agent recommendations</li>
+                            <li>Personalization and user modeling for agent selection</li>
+                            <li>Human-in-the-loop and interactive agent search systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Program Section -->
+        <section id="program" class="section">
+            <div class="container">
+                <h2 class="section-title">Workshop Program</h2>
+                <div class="section-content">
+                    <p class="program-note">The workshop features an interactive format including keynotes, panel discussions, breakout sessions, and poster presentations.</p>
+                    
+                    <div class="schedule-wrapper">
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Activity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>09:00 - 09:15</td>
+                                    <td><strong>Opening Remarks</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>09:15 - 10:00</td>
+                                    <td><strong>Keynote 1:</strong> TBD</td>
+                                </tr>
+                                <tr>
+                                    <td>10:00 - 10:30</td>
+                                    <td><strong>Oral Presentations</strong> - Session 1: TBD</td>
+                                </tr>
+                                <tr>
+                                    <td>10:30 - 11:00</td>
+                                    <td>Coffee Break & Poster Session</td>
+                                </tr>
+                                <tr>
+                                    <td>11:00 - 11:45</td>
+                                    <td><strong>Keynote 2:</strong> TBD</td>
+                                </tr>
+                                <tr>
+                                    <td>11:45 - 12:30</td>
+                                    <td><strong>Oral Presentations</strong> - Session 2: TBD</td>
+                                </tr>
+                                <tr>
+                                    <td>12:30 - 14:00</td>
+                                    <td>Lunch Break</td>
+                                </tr>
+                                <tr>
+                                    <td>14:00 - 15:00</td>
+                                    <td><strong>Panel Discussion:</strong> TBD</td>
+                                </tr>
+                                <tr>
+                                    <td>15:00 - 15:30</td>
+                                    <td><strong>Challenge Results</strong> Presentation & Discussion</td>
+                                </tr>
+                                <tr>
+                                    <td>15:30 - 16:00</td>
+                                    <td>Coffee Break & Poster Session</td>
+                                </tr>
+                                <tr>
+                                    <td>16:00 - 17:00</td>
+                                    <td><strong>Breakout Sessions</strong> & Interactive Discussions</td>
+                                </tr>
+                                <tr>
+                                    <td>17:00 - 17:15</td>
+                                    <td><strong>Closing Remarks</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Speakers Section -->
+        <section id="speakers" class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">Keynotes & Invited Speakers</h2>
+                <div class="speakers-grid">
+                    <div class="speaker-card">
+                        <img src="assets/img/speakers/mark-sanderson.jpg" alt="Mark Sanderson" class="speaker-photo">
+                        <div class="speaker-info">
+                            <h3><a href="https://marksanderson.org/" target="_blank" rel="noopener noreferrer">Mark Sanderson</a></h3>
+                            <p class="speaker-affiliation">RMIT University</p>
+                            <p class="speaker-bio">Mark Sanderson is Professor of Information Retrieval at RMIT University and Dean of Research for the STEM College. He is widely recognized for his early work demonstrating the value of search result snippets, which are now a standard feature of modern search engines. His research spans information retrieval, web search, and human information interaction, with a particular focus on how users engage with and benefit from search systems.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="speaker-card">
+                        <img src="assets/img/speakers/edgar-meij.jpg" alt="Edgar Meij" class="speaker-photo">
+                        <div class="speaker-info">
+                            <h3><a href="https://edgar.meij.pro/" target="_blank" rel="noopener noreferrer">Edgar Meij</a></h3>
+                            <p class="speaker-affiliation">Bloomberg</p>
+                            <p class="speaker-bio">Edgar Meij is Head of AI Platforms within Bloomberg's Artificial Intelligence group, where he leads more than ten teams of engineers and researchers responsible for the company's core AI, NLP, machine learning, large language model, and search technology platforms. His expertise includes information retrieval, natural language processing, knowledge graphs, semantic search, and large-scale computing infrastructure.</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="speakers-note">More speakers to be announced soon.</p>
+            </div>
+        </section>
+
+        <!-- Call for Papers Section -->
+        <section id="cfp" class="section">
+            <div class="container">
+                <h2 class="section-title">Call for Papers</h2>
+                <div class="section-content">
+                    <p>Coming soon.</p>
+                    
+                    <h3>Submission Types</h3>
+                    <ul class="cfp-list">
+                        <li><strong>Research Papers:</strong> Coming soon.</li>
+                    </ul>
+                    
+                    <h3>Submission Guidelines</h3>
+                    <p>Coming soon.</p>
+                    
+                    <p class="cfp-note"><strong>Note:</strong> This is a non-archival workshop. Accepted papers will be made available on the workshop website, but authors retain full copyright and are free to submit to other venues.</p>
+                    
+                    <div class="cfp-dates">
+                        <h3>Important Dates</h3>
+                        <ul class="dates-list">
+                            <li><strong>Paper Submission Deadline:</strong> April 15, 2026 (AoE)</li>
+                            <li><strong>Notification of Acceptance:</strong> May 20, 2026 (AoE)</li>
+                            <li><strong>Camera-Ready Deadline:</strong> TBD</li>
+                            <li><strong>Workshop Date:</strong> July 24, 2026</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cfp-button-wrapper">
+                        <!-- <a href="https://easychair.org/conferences/?conf=agentsearch2026" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Submit Your Paper</a> -->
+                        <a class="btn btn-disabled" target="_blank" rel="noopener noreferrer">Submit Your Paper</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenge Section -->
+        <section id="challenge" class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">AgentSearch Challenge</h2>
+                <div class="section-content">
+                    <p>Participate in the first shared task on ranking AI agents given task descriptions. The challenge provides a benchmark for evaluating agent search systems in practical scenarios.</p>
+                    
+                    <!-- <h3>Challenge Overview</h3>
+                    <p>Participants will develop systems that rank a collection of AI agents based on their suitability for completing specific tasks. Agents vary in their capabilities, API interfaces, performance characteristics, and domain expertise. The challenge includes diverse tasks spanning multiple domains to test the generalizability of ranking approaches.</p>
+                    
+                    <h3>Dataset & Tasks</h3>
+                    <ul class="challenge-list">
+                        <li><strong>Agent Collection:</strong> 500+ documented AI agents with capability descriptions, API specifications, and performance metadata</li>
+                        <li><strong>Task Queries:</strong> 200+ task descriptions covering information retrieval, data analysis, content generation, and decision support scenarios</li>
+                        <li><strong>Ground Truth:</strong> Relevance judgments based on agent execution results and expert assessments</li>
+                    </ul>
+                    
+                    <h3>Evaluation</h3>
+                    <p>Systems will be evaluated using standard IR metrics (NDCG, MAP, MRR) as well as task-specific metrics considering agent performance, cost, and latency. Participants can submit up to 5 runs for evaluation.</p>
+                     -->
+
+                    <h3>Challenge Overview</h3>
+                    <p>Coming soon.</p>
+                    
+                    <h3>Dataset & Tasks</h3>
+                    <ul class="challenge-list">
+                        Coming soon.
+                    </ul>
+                    
+                    <h3>Evaluation</h3>
+                    <p>Coming soon.</p>
+                    
+                    <div class="challenge-timeline">
+                        <h3>Challenge Timeline</h3>
+                        <ul class="dates-list">
+                            <li><strong>Registration Opens:</strong> TBD</li>
+                            <li><strong>Dataset Release:</strong> TBD</li>
+                            <li><strong>Submission Deadline:</strong> TBD</li>
+                            <li><strong>Results Announcement:</strong> TBD</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="challenge-button-wrapper">
+                        <!-- <a href="https://github.com/agentsearch/challenge-2026" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join the Challenge</a> -->
+                        <a class="btn btn-disabled" target="_blank" rel="noopener noreferrer">Join the Challenge</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Organizers Section -->
+        <section id="organizers" class="section">
+            <div class="container">
+                <h2 class="section-title">Organizers</h2>
+                <div class="organizers-grid">
+                    <div class="organizer-card">
+                        <a href="https://uk.linkedin.com/in/bin-wu-a915601a5" target="_blank" rel="noopener noreferrer" class="organizer-link">
+                            <img src="assets/img/organizers/bin-wu.jpg" alt="Bin Wu" class="organizer-photo">
+                            <h3>Bin Wu</h3>
+                            <p class="organizer-affiliation">University College London</p>
+                        </a>
+                    </div>
+                    
+                    <div class="organizer-card">
+                        <a href="https://kimdanny.github.io/" target="_blank" rel="noopener noreferrer" class="organizer-link">
+                            <img src="assets/img/organizers/toeun-kim.jpeg" alt="To Eun Kim" class="organizer-photo">
+                            <h3>To Eun Kim</h3>
+                            <p class="organizer-affiliation">Carnegie Mellon University</p>
+                        </a>
+                    </div>
+                    
+                    <div class="organizer-card">
+                        <a href="https://fengyue-leah.github.io/" target="_blank" rel="noopener noreferrer" class="organizer-link">
+                            <img src="assets/img/organizers/yue-feng.jpeg" alt="Yue Feng" class="organizer-photo">
+                            <h3>Yue Feng</h3>
+                            <p class="organizer-affiliation">University of Birmingham</p>
+                        </a>
+                    </div>
+                    
+                    <div class="organizer-card">
+                        <a href="https://841.io/" target="_blank" rel="noopener noreferrer" class="organizer-link">
+                            <img src="assets/img/organizers/fernando-diaz.jpg" alt="Fernando Diaz" class="organizer-photo">
+                            <h3>Fernando Diaz</h3>
+                            <p class="organizer-affiliation">Carnegie Mellon University</p>
+                        </a>
+                    </div>
+                    
+                    <div class="organizer-card">
+                        <a href="https://renzhaochun.github.io/" target="_blank" rel="noopener noreferrer" class="organizer-link">
+                            <img src="assets/img/organizers/zhaochun-ren.jpeg" alt="Zhaochun Ren" class="organizer-photo">
+                            <h3>Zhaochun Ren</h3>
+                            <p class="organizer-affiliation">Leiden University</p>
+                        </a>
+                    </div>
+                    
+                    <div class="organizer-card">
+                        <a href="https://sites.google.com/site/emineyilmaz/" target="_blank" rel="noopener noreferrer" class="organizer-link">
+                            <img src="assets/img/organizers/emine-yilmaz.jpg" alt="Emine Yilmaz" class="organizer-photo">
+                            <h3>Emine Yilmaz</h3>
+                            <p class="organizer-affiliation">University College London & Amazon</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Program Committee Section -->
+        <section id="pc" class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">Program Committee</h2>
+                <div class="section-content">
+                    <ul class="pc-list">
+                        <li><span class="pc-name">Chuan Meng</span> <span class="pc-affiliation">University of Edinburgh</span></li>
+                        <li><span class="pc-name">Haolun Wu</span> <span class="pc-affiliation">McGill University</span></li>
+                        <li><span class="pc-name">Hossein A. Rahmani</span> <span class="pc-affiliation">University College London</span></li>
+                        <li><span class="pc-name">Shuofei Qiao</span> <span class="pc-affiliation">Zhejiang University</span></li>
+                        <!-- Add more PC members as needed -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="section-content contact-content">
+                    <p>For questions, suggestions, or more information about the workshop, please contact us:</p>
+                    <p class="contact-email">
+                        <strong>Email:</strong> <a href="mailto:bin.wu.23@ucl.ac.uk">bin.wu.23@ucl.ac.uk</a>
+                    </p>
+                    
+                    <div class="social-links">
+                        <a href="https://x.com/AgentSearchIR" target="_blank" rel="noopener noreferrer" aria-label="Twitter">X(Twitter)</a>
+                        <span class="separator">·</span>
+                        <a href="https://github.com/Agent-Search" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+                        <span class="separator">·</span>
+                        <a href="https://bsky.app/profile/agentsearch.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">Bluesky</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 AgentSearch Workshop. Part of SIGIR 2026 Conference.</p>
+            <p class="footer-update">Last updated: February 14, 2026</p>
+            <!-- Visitor Counter -->
+            <div class="visitor-counter">
+                <a href="https://info.flagcounter.com/ysKc" target="_blank" rel="noopener noreferrer">
+                    <img src="https://s01.flagcounter.com/count2/ysKc/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_12/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
