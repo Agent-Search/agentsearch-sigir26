@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgentSearch @ SIGIR 2026 — Call for Papers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================
+       PRINT & PAGE SETUP
+       ============================================================ */
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    html {
+      background: #d1d5db;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 24px 0 48px;
+    }
+
+    @media print {
+      html { background: white; padding: 0; display: block; }
+    }
+
+    body {
+      width: 210mm;
+      height: 297mm;
+      overflow: hidden;
+      background: #ffffff;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #0f172a;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      position: relative;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+    }
+
+    @media print { body { box-shadow: none; } }
+
+    /* ============================================================
+       DESIGN TOKENS  (mirrors website variables)
+       ============================================================ */
+    :root {
+      --teal:       #14b8a6;
+      --teal-dk:    #0f766e;
+      --teal-lt:    #5eead4;
+      --purple:     #8b5cf6;
+      --purple-dk:  #7c3aed;
+      --slate:      #334155;
+      --navy:       #0f172a;
+      --mid:        #64748b;
+      --muted:      #94a3b8;
+      --white:      #ffffff;
+      --bg-gray:    #f8fafc;
+      --bg-dark:    #1e293b;
+      --border:     #e2e8f0;
+    }
+
+    /* ============================================================
+       DECORATIVE BACKGROUND
+       ============================================================ */
+    .deco-layer {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    /* ============================================================
+       POSTER WRAPPER
+       ============================================================ */
+    .poster {
+      width: 210mm;
+      height: 297mm;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ============================================================
+       1. HERO HEADER  (44mm)
+       ============================================================ */
+    .poster-header {
+      flex-shrink: 0;
+      height: 44mm;
+      position: relative;
+      background: linear-gradient(125deg,
+        #0a5e58 0%,
+        #0f766e 20%,
+        #14b8a6 45%,
+        #6d28d9 78%,
+        #8b5cf6 100%
+      );
+      padding: 5mm 7.5mm 4.5mm 7.5mm;
+      overflow: hidden;
+    }
+
+    .hd-circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+      pointer-events: none;
+    }
+    .hd-c1 { width: 58mm; height: 58mm; top: -20mm; right: 12mm; }
+    .hd-c2 { width: 40mm; height: 40mm; bottom: -14mm; right: 58mm; }
+    .hd-c3 { width: 26mm; height: 26mm; top: 2mm; right: 74mm; background: rgba(255,255,255,0.04); }
+    .hd-c4 { width: 16mm; height: 16mm; top: -4mm; left: 88mm; background: rgba(255,255,255,0.05); }
+
+    .header-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2.5mm;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cfp-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.5mm;
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.38);
+      color: white;
+      padding: 1mm 3.5mm;
+      border-radius: 20mm;
+      font-size: 6.5pt;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      backdrop-filter: blur(4px);
+    }
+
+    .cfp-badge::before {
+      content: '✦';
+      font-size: 5.5pt;
+      opacity: 0.85;
+    }
+
+    .conf-meta {
+      text-align: right;
+      color: rgba(255,255,255,0.78);
+      font-size: 7pt;
+      font-weight: 500;
+      line-height: 1.45;
+    }
+
+    .conf-meta strong {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: white;
+      display: block;
+      letter-spacing: 0.3px;
+    }
+
+    .hero-title {
+      font-size: 24pt;
+      font-weight: 800;
+      color: white;
+      line-height: 1.0;
+      letter-spacing: -0.5px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.22);
+      margin-bottom: 2mm;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-title .workshop-at {
+      font-size: 13.5pt;
+      font-weight: 600;
+      color: rgba(255,255,255,0.68);
+      letter-spacing: 0.2px;
+    }
+
+    .hero-subtitle {
+      font-size: 9pt;
+      font-weight: 500;
+      color: rgba(255,255,255,0.93);
+      line-height: 1.35;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ============================================================
+       2. WORKSHOP OVERVIEW STRIP  (full-width, 52mm)
+       ============================================================ */
+    .overview-strip {
+      flex-shrink: 0;
+      height: 52mm;
+      background: var(--bg-gray);
+      border-bottom: 1px solid var(--border);
+      padding: 5mm 7.5mm;
+      display: flex;
+      align-items: stretch;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Workshop overview background image */
+    .overview-strip::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: url('assets/img/hero-background.jpg') center/cover no-repeat;
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    .overview-inner {
+      position: relative;
+      z-index: 1;
+    }
+    
+
+    /* Left accent bar with gradient + workshop keyword pill */
+    .overview-accent {
+      flex-shrink: 0;
+      width: 3px;
+      border-radius: 2px;
+      background: linear-gradient(180deg, var(--teal) 0%, var(--purple) 100%);
+      margin-right: 5mm;
+    }
+
+    .overview-inner {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2.8mm;
+    }
+
+    .overview-label {
+      display: flex;
+      align-items: center;
+      gap: 3mm;
+    }
+
+    .overview-tag {
+      font-size: 5.8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      color: var(--slate);
+    }
+
+    /* Teal keyword pill (mirrors website btn-primary style) */
+    .ov-pill {
+      display: inline-block;
+      background: linear-gradient(120deg, var(--teal-dk) 0%, var(--teal) 100%);
+      color: white;
+      font-size: 5.8pt;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      padding: 0.6mm 2.5mm;
+      border-radius: 10mm;
+    }
+
+    .overview-headline {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.25;
+    }
+
+    .overview-headline em {
+      font-style: normal;
+      color: var(--teal-dk);
+    }
+
+    .overview-text {
+      font-size: 7.5pt;
+      line-height: 1.58;
+      color: var(--mid);
+    }
+
+    .overview-text strong {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    /* ============================================================
+       3. MAIN BODY  — two columns, fills remaining height
+       ============================================================ */
+    .poster-body {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 76mm;
+      overflow: hidden;
+      min-height: 0;
+    }
+
+    /* ---- LEFT COLUMN: Topics fills all height ---- */
+    .col-left {
+      padding: 4mm 4mm 3.5mm 7.5mm;
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ---- RIGHT COLUMN: sections distribute evenly ---- */
+    .col-right {
+      padding: 4mm 6.5mm 3.5mm 4.5mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--bg-gray);
+      overflow: hidden;
+    }
+
+    /* ============================================================
+       SECTION HEADER  (shared)
+       ============================================================ */
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 2.5mm;
+      margin-bottom: 2.5mm;
+    }
+
+    .sec-bar {
+      flex-shrink: 0;
+      width: 2.5px;
+      height: 4mm;
+      border-radius: 2px;
+      background: linear-gradient(180deg, var(--teal) 0%, var(--purple) 100%);
+    }
+
+    .sec-title {
+      font-size: 6.8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      color: var(--slate);
+    }
+
+    /* ============================================================
+       TOPICS SECTION  (left col, fills all available height)
+       ============================================================ */
+    .topics-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    /* 2×2 grid; rows stretch to fill column height */
+    .topics-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 2.5mm;
+    }
+
+    .topic-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 3.5mm 3mm 3mm 5mm;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topic-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      border-radius: 3px 0 0 3px;
+      background: linear-gradient(180deg, var(--teal) 60%, var(--purple) 100%);
+      opacity: 0.75;
+    }
+
+    .topic-card h4 {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: var(--teal-dk);
+      margin-bottom: 2.5mm;
+      line-height: 1.25;
+    }
+
+    .topic-card ul { list-style: none; }
+
+    .topic-card li {
+      font-size: 6.5pt;
+      line-height: 1.45;
+      color: var(--mid);
+      padding: 0.4mm 0 0.4mm 3.2mm;
+      position: relative;
+    }
+
+    .topic-card li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      top: 0.4mm;
+      color: var(--teal);
+      font-size: 5.5pt;
+    }
+
+    /* ============================================================
+       IMPORTANT DATES CARD
+       ============================================================ */
+    .dates-card {
+      background: var(--white);
+      border: 1.5px solid var(--teal-lt);
+      border-radius: 5px;
+      padding: 3mm 3.5mm;
+      box-shadow: 0 3px 10px rgba(20,184,166,0.10);
+    }
+
+    .date-item {
+      padding: 2mm 0;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .date-item:first-child { padding-top: 0; }
+    .date-item:last-child  { border-bottom: none; padding-bottom: 0; }
+
+    .date-label {
+      font-size: 5.8pt;
+      font-weight: 600;
+      color: var(--mid);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.6mm;
+    }
+
+    .date-value {
+      font-size: 9pt;
+      font-weight: 700;
+      color: var(--teal-dk);
+    }
+
+    .date-item.accent .date-value { color: var(--purple-dk); }
+    .date-item.accent .date-label { color: var(--purple-dk); opacity: 0.75; }
+
+    .date-note {
+      font-size: 5.5pt;
+      color: var(--muted);
+      margin-top: 0.4mm;
+    }
+
+    /* ============================================================
+       SUBMISSION SECTION
+       ============================================================ */
+    .paper-types {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5mm;
+      margin-bottom: 2.5mm;
+    }
+
+    .p-type {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 2mm;
+      font-size: 5.8pt;
+      line-height: 1.4;
+      color: var(--mid);
+    }
+
+    .p-type strong {
+      color: var(--teal-dk);
+      font-size: 6pt;
+      display: block;
+      margin-bottom: 0.4mm;
+    }
+
+    .sub-note {
+      font-size: 6.3pt;
+      color: var(--mid);
+      margin-bottom: 2mm;
+      line-height: 1.45;
+    }
+
+    .sub-note strong { color: var(--navy); }
+
+    .submit-box {
+      background: linear-gradient(120deg,
+        rgba(20,184,166,0.08) 0%,
+        rgba(139,92,246,0.08) 100%
+      );
+      border-left: 3px solid var(--teal);
+      border-radius: 0 3px 3px 0;
+      padding: 2.2mm 2.8mm;
+      font-size: 6pt;
+      color: var(--teal-dk);
+      font-weight: 600;
+      word-break: break-all;
+      line-height: 1.5;
+    }
+
+    /* ============================================================
+       QR CODE BLOCK
+       ============================================================ */
+    .qr-block {
+      display: flex;
+      gap: 4mm;
+      align-items: flex-start;
+    }
+
+    .qr-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .qr-primary { flex: 1.25; }
+
+    .qr-item img {
+      width: 100%;
+      max-width: 28mm;
+      height: auto;
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      margin-bottom: 1.5mm;
+    }
+
+    .qr-label {
+      font-size: 6pt;
+      font-weight: 700;
+      color: var(--slate);
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .qr-url {
+      font-size: 5.2pt;
+      color: var(--muted);
+      text-align: center;
+      word-break: break-all;
+      margin-top: 0.6mm;
+      line-height: 1.3;
+    }
+
+    /* ============================================================
+       4. ORGANIZER FOOTER  (48mm, with photos)
+       ============================================================ */
+    .poster-footer {
+      flex-shrink: 0;
+      height: 48mm;
+      background: var(--bg-dark);
+      padding: 4mm 7.5mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .org-heading {
+      font-size: 10pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 3mm;
+    }
+
+    .org-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0;
+    }
+
+    .org-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .org-photo {
+      width: 19mm;
+      height: 19mm;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 1.5px solid rgba(255,255,255,0.20);
+      margin-bottom: 2mm;
+      display: block;
+      background: #334155;
+    }
+
+    .org-name {
+      font-size: 6.5pt;
+      font-weight: 600;
+      color: rgba(255,255,255,0.88);
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .org-affil {
+      font-size: 5.3pt;
+      color: rgba(255,255,255,0.42);
+      text-align: center;
+      white-space: nowrap;
+      margin-top: 0.4mm;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Decorative background SVG mesh -->
+  <div class="deco-layer" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg"
+         width="210mm" height="297mm"
+         viewBox="0 0 793.7 1122.5"
+         style="position:absolute;inset:0;width:100%;height:100%;">
+      <circle cx="700" cy="310" r="88" fill="none" stroke="#14b8a6" stroke-width="0.9" opacity="0.055"/>
+      <circle cx="700" cy="310" r="55" fill="none" stroke="#14b8a6" stroke-width="0.6" opacity="0.045"/>
+      <circle cx="700" cy="310" r="26" fill="none" stroke="#5eead4" stroke-width="0.5" opacity="0.06"/>
+      <circle cx="88"  cy="860" r="95" fill="none" stroke="#8b5cf6" stroke-width="0.9" opacity="0.05"/>
+      <circle cx="88"  cy="860" r="60" fill="none" stroke="#8b5cf6" stroke-width="0.6" opacity="0.04"/>
+      <circle cx="88"  cy="860" r="30" fill="none" stroke="#c4b5fd" stroke-width="0.5" opacity="0.055"/>
+      <circle cx="660" cy="400" r="2.2" fill="#14b8a6" opacity="0.12"/>
+      <circle cx="630" cy="428" r="1.6" fill="#14b8a6" opacity="0.09"/>
+      <circle cx="692" cy="378" r="1.4" fill="#5eead4" opacity="0.09"/>
+      <line x1="660" y1="400" x2="630" y2="428" stroke="#14b8a6" stroke-width="0.5" opacity="0.08"/>
+      <line x1="660" y1="400" x2="692" y2="378" stroke="#14b8a6" stroke-width="0.5" opacity="0.07"/>
+      <circle cx="114" cy="800" r="2.2" fill="#8b5cf6" opacity="0.10"/>
+      <circle cx="144" cy="822" r="1.6" fill="#8b5cf6" opacity="0.08"/>
+      <circle cx="85"  cy="826" r="1.4" fill="#c4b5fd" opacity="0.08"/>
+      <line x1="114" y1="800" x2="144" y2="822" stroke="#8b5cf6" stroke-width="0.5" opacity="0.08"/>
+      <line x1="114" y1="800" x2="85"  y2="826" stroke="#8b5cf6" stroke-width="0.5" opacity="0.07"/>
+    </svg>
+  </div>
+
+  <div class="poster">
+
+    <!-- ════════════════════════════════════════════════════
+         1. HERO HEADER  (44mm)
+         ════════════════════════════════════════════════════ -->
+    <header class="poster-header">
+      <div class="hd-circle hd-c1"></div>
+      <div class="hd-circle hd-c2"></div>
+      <div class="hd-circle hd-c3"></div>
+      <div class="hd-circle hd-c4"></div>
+
+      <div class="header-meta">
+        <div class="cfp-badge">Call for Papers</div>
+        <div class="conf-meta">
+          <strong>SIGIR 2026</strong>
+          Melbourne, Australia &nbsp;·&nbsp; July 24, 2026
+        </div>
+      </div>
+
+      <h1 class="hero-title">
+        AgentSearch Workshop
+        <br><span class="workshop-at">@ SIGIR&nbsp;2026</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        The First Workshop on Indexing, Retrieval, and Ranking of AI Agents
+      </p>
+    </header>
+
+
+    <!-- ════════════════════════════════════════════════════
+         2. WORKSHOP OVERVIEW STRIP  (full-width, 52mm)
+         ════════════════════════════════════════════════════ -->
+    <div class="overview-strip">
+      <div class="overview-accent"></div>
+      <div class="overview-inner">
+        <div class="overview-label">
+          <span class="overview-tag">Workshop Overview</span>
+          <span class="ov-pill">SIGIR 2026 · Melbourne</span>
+        </div>
+        <p class="overview-headline">
+          How should we <em>find, rank, and evaluate</em> AI agents?<br>
+          <span style="font-size:8pt;font-weight:500;color:var(--mid);">A new information retrieval challenge for the agentic era.</span>
+        </p>
+        <p class="overview-text">
+          As AI agents and tools increasingly perform tasks on behalf of users, the digital ecosystem is rapidly filling with dynamic, task-oriented systems that offer overlapping capabilities. This shift raises a fundamental question: <strong>how can users and orchestrating systems reliably discover, compare, and select the most appropriate agents for a given task?</strong> AgentSearch frames this challenge as a first-class information retrieval problem. Unlike traditional IR, where static documents are retrieved, agent search involves dynamic entities whose suitability depends on capabilities, reliability, constraints, and task-dependent performance. This workshop brings together researchers and practitioners to develop principled methods for indexing, retrieving, ranking, and evaluating AI agents and tools, establishing a coherent research agenda at the intersection of information retrieval and agentic systems.
+        </p>
+      </div>
+    </div>
+
+
+    <!-- ════════════════════════════════════════════════════
+         3. MAIN BODY  (185mm, two columns)
+         ════════════════════════════════════════════════════ -->
+    <div class="poster-body">
+
+      <!-- ══  LEFT COLUMN: Topics fills all height  ══ -->
+      <div class="col-left">
+
+        <div class="topics-section">
+          <div class="sec-head">
+            <div class="sec-bar"></div>
+            <span class="sec-title">Topics of Interest</span>
+          </div>
+
+          <div class="topics-grid">
+
+            <div class="topic-card">
+              <h4>Representation &amp; Discovery</h4>
+              <ul>
+                <li>Modeling agent capabilities, constraints &amp; costs</li>
+                <li>Profiling and probing agents and tools</li>
+                <li>Indexing dynamic or behavior-based properties</li>
+                <li>Discovery in large, heterogeneous ecosystems</li>
+              </ul>
+            </div>
+
+            <div class="topic-card">
+              <h4>Retrieval, Ranking &amp; Recommendation</h4>
+              <ul>
+                <li>Learning-to-rank for agent selection</li>
+                <li>Task-, constraint- &amp; reliability-aware ranking</li>
+                <li>Proactive agent recommendation</li>
+                <li>Multi-agent routing &amp; orchestration</li>
+                <li>Hybrid &amp; ensemble retrieval strategies</li>
+              </ul>
+            </div>
+
+            <div class="topic-card">
+              <h4>Evaluation &amp; Benchmarking</h4>
+              <ul>
+                <li>Metrics for suitability, robustness &amp; performance</li>
+                <li>Workflow-aware evaluation protocols</li>
+                <li>Benchmark &amp; dataset construction</li>
+                <li>LLM-based and preference-based evaluation</li>
+              </ul>
+            </div>
+
+            <div class="topic-card">
+              <h4>Responsible &amp; Human-Centered</h4>
+              <ul>
+                <li>Safety &amp; risk mitigation in agent retrieval</li>
+                <li>Fairness and exposure in agent markets</li>
+                <li>Transparency and explainability</li>
+                <li>Personalization for agent selection</li>
+                <li>Human-in-the-loop search systems</li>
+              </ul>
+            </div>
+
+          </div><!-- /.topics-grid -->
+        </div><!-- /.topics-section -->
+
+      </div><!-- /.col-left -->
+
+
+      <!-- ══  RIGHT COLUMN: sections evenly distributed  ══ -->
+      <div class="col-right">
+
+        <!-- IMPORTANT DATES -->
+        <div>
+          <div class="sec-head">
+            <div class="sec-bar"></div>
+            <span class="sec-title">Important Dates</span>
+          </div>
+          <div class="dates-card">
+            <div class="date-item">
+              <div class="date-label">Submission Deadline</div>
+              <div class="date-value">April 15, 2026</div>
+              <div class="date-note">Anywhere on Earth (AoE)</div>
+            </div>
+            <div class="date-item">
+              <div class="date-label">Acceptance Notification</div>
+              <div class="date-value">May 20, 2026</div>
+              <div class="date-note">Anywhere on Earth (AoE)</div>
+            </div>
+            <div class="date-item accent">
+              <div class="date-label">Workshop Date</div>
+              <div class="date-value">July 24, 2026</div>
+              <div class="date-note">SIGIR 2026 · Melbourne, Australia</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUBMISSION INFO -->
+        <div>
+          <div class="sec-head">
+            <div class="sec-bar"></div>
+            <span class="sec-title">Submission</span>
+          </div>
+
+          <div class="paper-types">
+            <div class="p-type">
+              <strong>Extended Abstracts</strong>
+              ≤ 2 pp (excl. refs)
+            </div>
+            <div class="p-type">
+              <strong>Research / Perspective / Demo</strong>
+              4–9 pp (excl. refs)
+            </div>
+          </div>
+
+          <p class="sub-note">
+            <strong>Format:</strong> ACM two-column (SIGIR 2026 template) · <strong>Double-blind</strong> · Non-archival
+          </p>
+
+          <p class="sub-note" style="margin-bottom:1.5mm;">Submit on EasyChair:</p>
+
+          <div class="submit-box">
+            easychair.org/conferences/<br>?conf=agentsearch2026
+          </div>
+        </div>
+
+        <!-- QR CODES -->
+        <div>
+          <div class="sec-head">
+            <div class="sec-bar"></div>
+            <span class="sec-title">Quick Access</span>
+          </div>
+
+          <div class="qr-block">
+            <div class="qr-item qr-primary">
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https%3A%2F%2Fagent-search.github.io%2Fagentsearch-sigir26%2F&color=0f766e&bgcolor=ffffff&ecc=M"
+                alt="QR — workshop website"
+                loading="lazy">
+              <div class="qr-label">Submit &amp; Learn More</div>
+              <div class="qr-url">agent-search.github.io/<br>agentsearch-sigir26</div>
+            </div>
+
+            <div class="qr-item qr-primary">
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fx.com%2FAgentSearchIR&color=7c3aed&bgcolor=ffffff&ecc=M"
+                alt="QR — X / Twitter"
+                loading="lazy">
+              <div class="qr-label">Follow Updates</div>
+              <div class="qr-url">x.com/AgentSearchIR</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.col-right -->
+
+    </div><!-- /.poster-body -->
+
+
+    <!-- ════════════════════════════════════════════════════
+         4. ORGANIZER FOOTER  (48mm, with photos)
+         ════════════════════════════════════════════════════ -->
+    <footer class="poster-footer">
+      <div class="org-heading">Organizers</div>
+      <div class="org-row">
+
+        <div class="org-item">
+          <img src="assets/img/organizers/bin-wu.jpg" alt="Bin Wu" class="org-photo">
+          <span class="org-name">Bin Wu</span>
+          <span class="org-affil">UCL</span>
+        </div>
+
+        <div class="org-item">
+          <img src="assets/img/organizers/toeun-kim.jpeg" alt="To Eun Kim" class="org-photo">
+          <span class="org-name">To Eun Kim</span>
+          <span class="org-affil">CMU</span>
+        </div>
+
+        <div class="org-item">
+          <img src="assets/img/organizers/yue-feng.jpeg" alt="Yue Feng" class="org-photo">
+          <span class="org-name">Yue Feng</span>
+          <span class="org-affil">Univ. of Birmingham</span>
+        </div>
+
+        <div class="org-item">
+          <img src="assets/img/organizers/fernando-diaz.jpg" alt="Fernando Diaz" class="org-photo">
+          <span class="org-name">Fernando Diaz</span>
+          <span class="org-affil">CMU</span>
+        </div>
+
+        <div class="org-item">
+          <img src="assets/img/organizers/zhaochun-ren.jpeg" alt="Zhaochun Ren" class="org-photo">
+          <span class="org-name">Zhaochun Ren</span>
+          <span class="org-affil">Leiden Univ.</span>
+        </div>
+
+        <div class="org-item">
+          <img src="assets/img/organizers/emine-yilmaz.jpg" alt="Emine Yilmaz" class="org-photo">
+          <span class="org-name">Emine Yilmaz</span>
+          <span class="org-affil">UCL &amp; Amazon</span>
+        </div>
+
+      </div>
+    </footer>
+
+  </div><!-- /.poster -->
+
+</body>
+</html>
