@@ -452,6 +452,30 @@
       color: var(--teal-dk);
     }
 
+    .date-old {
+      color: var(--muted);
+      margin-right: 1mm;
+    }
+
+    .date-new {
+      color: #c2410c;
+    }
+
+    .date-extended-badge {
+      display: inline-block;
+      margin-left: 1.2mm;
+      padding: 0.35mm 1.2mm;
+      border-radius: 2mm;
+      font-size: 5.4pt;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      color: #9a3412;
+      background: #ffedd5;
+      border: 0.5px solid #fdba74;
+      vertical-align: middle;
+    }
+
     .date-item.accent .date-value { color: var(--purple-dk); }
     .date-item.accent .date-label { color: var(--purple-dk); opacity: 0.75; }
 
@@ -776,7 +800,11 @@
           <div class="dates-card">
             <div class="date-item">
               <div class="date-label">Submission Deadline</div>
-              <div class="date-value"><del>April 15, 2026</del> May 8, 2026</div>
+              <div class="date-value">
+                <span class="date-old"><del>April 15, 2026</del></span>
+                <span class="date-new">May 8, 2026</span>
+                <span class="date-extended-badge">Extended</span>
+              </div>
               <div class="date-note">Anywhere on Earth (AoE)</div>
             </div>
             <div class="date-item">
