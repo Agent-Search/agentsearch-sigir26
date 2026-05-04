@@ -328,26 +328,25 @@
             <div class="container">
                 <h2 class="section-title">AgentSearch Challenge</h2>
                 <div class="section-content">
-                    <p>Participate in the first shared task on retrieving and ranking AI agents given task descriptions. The challenge provides a benchmark for evaluating agent search systems in practical scenarios.</p>
+                    <p>Participate in the first shared task on retrieving and ranking AI agents. The challenge provides a benchmark grounded in real-world execution signals across nearly 10,000 agents drawn from multiple providers.</p>
                     
                     <h3>Challenge Overview</h3>
-                    <p>This shared task evaluates retrieval and reranking methods against execution-grounded performance signals across nearly 10,000 real-world agents drawn from multiple providers. The challenge consists of two complementary tracks:</p>
+                    <p>The challenge consists of two complementary tracks:</p>
                     <ul class="challenge-list">
-                        <li><strong>Retrieval</strong>: Given a natural language task description, participants develop methods to retrieve the most relevant agents from a large-scale pool. This track evaluates the ability to surface strong candidate agents efficiently and accurately.</li>
+                        <li><strong>Retrieval</strong>: Given a natural language task specification, participants develop methods to retrieve the most relevant agents from a large-scale pool. This track evaluates the ability to surface strong candidate agents efficiently and accurately.</li>
                         <li><strong>Reranking</strong>: Given a retrieved set of candidate agents, participants develop methods to rerank them using execution-aware signals, contextual features, and agent metadata. This track focuses on closing the gap between surface-level relevance and true task performance.</li>
                     </ul>
 
                     <h3>Dataset &amp; Tasks</h3>
                     <ul class="challenge-list">
                         <li><strong>Agent Collection:</strong> Collection of real-world agents with capability descriptions and metadata.</li>
-                        <li><strong>Task Queries:</strong> Task descriptions and associated single-agent and multi-agent task queries.</li> 
+                        <li><strong>Task Specifications:</strong> Task descriptions and associated single-agent and multi-agent task queries.</li> 
                         <li><strong>Ground Truth:</strong> Binary retrieval labels and graded ranking labels derived from execution traces.</li>
                     </ul>
-                    <p> The dataset is available via <a href="https://huggingface.co/AgentSearch" target="_blank" rel="noopener noreferrer">HuggingFace Datasets</a>, and <a href="https://drive.google.com/drive/folders/1821MfvwzCsTH22IkWwApnkkoeUz9UVTa?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive</a>.</p>
+                    <p>The dataset is available via <a href="https://huggingface.co/AgentSearch" target="_blank" rel="noopener noreferrer">HuggingFace Datasets</a> and <a href="https://drive.google.com/drive/folders/1821MfvwzCsTH22IkWwApnkkoeUz9UVTa?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive</a>.</p>
 
                     <h3>Submission</h3>
-                    <p>Participants submit ranked agent lists per query in JSONL format: binary labels for Track 1 (Retrieval) and graded scores for Track 2 (Reranking, top-20 agents per task).</p>
-
+                    <p>Participants will be asked to submit ranked agent lists per query in the JSONL format. Please refer to the <a href="https://agent-search.github.io/agentsearch-challenge" target="_blank" rel="noopener noreferrer">challenge website</a> for full submission details and formatting guidelines.</p>
                     <div class="challenge-timeline">
                         <h3>Challenge Timeline</h3>
                         <ul class="dates-list">
