@@ -15,33 +15,29 @@
 /* ==========================================
    Program Committee Section
    ========================================== */
+.pc-note {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
 .pc-list {
+    display: grid;
+    gap: var(--spacing-xs) var(--spacing-md);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     list-style: none;
-    padding-left: 0;
-    margin: var(--spacing-md) 0;
-    max-width: 600px;
+    margin: var(--spacing-md) auto;
     margin-left: auto;
     margin-right: auto;
+    max-width: 760px;
+    padding-left: 0;
 }
+
 .pc-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--spacing-xs) 0;
-    border-bottom: 1px solid var(--color-border);
-    font-size: var(--font-size-large);
-}
-.pc-list li:last-child {
-    border-bottom: none;
-}
-.pc-name {
     font-weight: 500;
+    padding: var(--spacing-xs) 0;
+    text-align: center;
     color: var(--color-text);
-}
-.pc-affiliation {
-    color: var(--color-text-muted);
-    font-size: var(--font-size-small);
-    font-weight: 400;
 }
 /* ==========================================
    CSS Variables
