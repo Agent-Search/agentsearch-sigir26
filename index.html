@@ -55,7 +55,7 @@
                     <li><a href="#topics" class="nav-link">Topics</a></li>
                     <li><a href="#program" class="nav-link">Program</a></li>
                     <li><a href="#speakers" class="nav-link">Speakers</a></li>
-                    <li><a href="#cfp" class="nav-link">Submissions</a></li>
+                    <li><a href="#accepted-papers" class="nav-link">Papers</a></li>
                     <li><a href="#challenge" class="nav-link">Challenge</a></li>
                     <li><a href="#organizers" class="nav-link">Organizers</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -76,7 +76,7 @@
                     <h2 class="hero-subtitle">The First Workshop on Indexing, Retrieval, and Ranking of AI Agents</h2>
                     <p class="hero-conference">SIGIR 2026 · Melbourne | Naarm, Australia · July 24, 2026</p>
                     <div class="hero-buttons">
-                        <a href="#cfp" class="btn btn-primary" style="font-weight:700;">Call for Papers</a>
+                        <a href="#accepted-papers" class="btn btn-primary" style="font-weight:700;">Accepted Papers</a>
                         <a href="#challenge" class="btn btn-secondary" style="font-weight:700;">Challenge</a>
                     </div>
                 </div>
@@ -148,64 +148,96 @@
             <div class="container">
                 <h2 class="section-title">Workshop Program</h2>
                 <div class="section-content">
-                    <p class="program-note">The workshop features an interactive format including keynotes, panel discussions, breakout sessions, and poster presentations.</p>
+                    <p class="program-note">The workshop features an interactive format including keynotes, invited talks, oral presentations, poster presentations, and a panel discussion.</p>
                     
                     <div class="schedule-wrapper">
                         <table class="schedule-table">
                             <thead>
                                 <tr>
                                     <th>Time</th>
-                                    <th>Activity</th>
+                                    <th>Agenda</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>09:00 - 09:15</td>
-                                    <td><strong>Opening Remarks</strong></td>
+                                    <td>09.00 - 09.15</td>
+                                    <td><strong>Opening</strong></td>
                                 </tr>
                                 <tr>
-                                    <td>09:15 - 10:00</td>
-                                    <td><strong>Keynote 1:</strong> TBD</td>
+                                    <td>09.15 - 09.45</td>
+                                    <td>
+                                        <strong>Keynote 1</strong><br>
+                                        Olivier Jeunen<br>
+                                        <span class="talk-title">Agent Evaluation is Policy Evaluation</span>
+                                        <details class="talk-abstract">
+                                            <summary>Abstract</summary>
+                                            <p>Large language models and AI agents are increasingly deployed as decision-making systems, yet they are still primarily evaluated using static offline benchmarks and costly online experiments. This mismatch limits our ability to measure incremental progress, compare systems reliably, and iterate quickly.</p>
+                                            <p>At their core, LLMs and agents are policies: distributions over actions conditioned on context. The sequential decision-making literature has developed decades of theory and algorithms for evaluating such policies, including off-policy evaluation from logged interactions. Recent advances allow us to estimate distributions of treatment effects while navigating fundamental bias-variance tradeoffs.</p>
+                                            <p>This talk argues that these ideas provide a natural foundation for the next generation of LLM and agent evaluation. I will discuss how policy evaluation can be extended to the distinctive challenges posed by modern agents-including enormous action spaces, ambiguous rewards, and non-Markovian interactions-and outline opportunities for research at the intersection of sequential decision-making and information retrieval.</p>
+                                        </details>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>10:00 - 10:30</td>
-                                    <td><strong>Oral Presentations</strong> - Session 1: TBD</td>
+                                    <td>09.45 - 10.00</td>
+                                    <td><strong>Invited Talk 1</strong><br>To Eun Kim</td>
                                 </tr>
                                 <tr>
-                                    <td>10:30 - 11:00</td>
-                                    <td>Coffee Break & Poster Session</td>
+                                    <td>10.00 - 10.15</td>
+                                    <td><strong>Challenge Overview</strong><br>Bin Wu</td>
                                 </tr>
                                 <tr>
-                                    <td>11:00 - 11:45</td>
-                                    <td><strong>Keynote 2:</strong> TBD</td>
+                                    <td>10.15 - 10.30</td>
+                                    <td><strong>Workshop Paper Presentation 1</strong> (oral presentation)<br>Paper 4643: Natural Language Query to Configuration for Retrieval Agents</td>
                                 </tr>
                                 <tr>
-                                    <td>11:45 - 12:30</td>
-                                    <td><strong>Oral Presentations</strong> - Session 2: TBD</td>
+                                    <td>10.30 - 11.00</td>
+                                    <td>Coffee Break</td>
                                 </tr>
                                 <tr>
-                                    <td>12:30 - 14:00</td>
+                                    <td>11.00 - 11.30</td>
+                                    <td><strong>Workshop Paper Presentation 2</strong> (oral presentations)<br>Paper 0357: Adapting Embedding Models for Agent Capability Retrieval<br><br>Paper 9872: Towards a Multi-Expert Agent Search System for Geopolitical Event Forecasting</td>
+                                </tr>
+                                <tr>
+                                    <td>11.30 - 12.30</td>
+                                    <td><strong>Poster Presentation</strong><br>~11 posters</td>
+                                </tr>
+                                <tr>
+                                    <td>12.30 - 13.30</td>
                                     <td>Lunch Break</td>
                                 </tr>
                                 <tr>
-                                    <td>14:00 - 15:00</td>
-                                    <td><strong>Panel Discussion:</strong> TBD</td>
+                                    <td>13.30 - 14.00</td>
+                                    <td>
+                                        <strong>Keynote 3</strong><br>
+                                        Mark Sanderson<br>
+                                        <span class="talk-title">From Distributed Digital Libraries to Agent Search: Lessons from TREC's Million LLM Track and the Emerging Information Landscape</span>
+                                        <details class="talk-abstract">
+                                            <summary>Abstract</summary>
+                                            <p>I will examine the emerging problem of Agent Search through the lens of present and past search paradigms. I will begin by introducing the TREC Million LLM Track, which can be viewed as a large-scale evaluation campaign for a form of multi-agent search. I will outline the design of the track, the tasks it poses, and early findings from participating groups, highlighting what these results reveal about the retrieval, ranking, and evaluation of AI systems as search targets in their own right.</p>
+                                            <p>I will then contextualise current developments by examining earlier efforts in distributed search and distributed digital libraries, including peer-to-peer systems such as Kazaa and prior research on federated information access. Why did these efforts often produce systems that struggled to outperform a centralised web search such as Google? I will ask when distributed search has in fact succeeded, and what those successes can teach us about the future of agent search.</p>
+                                            <p>We are already seeing clues of an emerging information landscape, where publishers and information providers expose content through proprietary LLMs. Current large scale RAG systems synthesise evidence across multiple collections; will we see them start to synthesise across agents as well?</p>
+                                        </details>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>15:00 - 15:30</td>
-                                    <td><strong>Challenge Results</strong> Presentation & Discussion</td>
+                                    <td>14.00 - 14.15</td>
+                                    <td><strong>Invited Talk 2</strong><br>Fengyu Cai</td>
                                 </tr>
                                 <tr>
-                                    <td>15:30 - 16:00</td>
-                                    <td>Coffee Break & Poster Session</td>
+                                    <td>14.15 - 15.00</td>
+                                    <td><strong>Workshop Paper Presentation 3</strong> (oral presentations)<br>Paper 7761: RouteRec: Strict Evaluation of Recommender-Agent Selection and Aggregation<br><br>Paper 0318: Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates<br><br>Paper 4831: LLM Retrieval for Stable and Predictable Ad Recommendations</td>
                                 </tr>
                                 <tr>
-                                    <td>16:00 - 17:00</td>
-                                    <td><strong>Breakout Sessions</strong> & Interactive Discussions</td>
+                                    <td>15.00 - 15.30</td>
+                                    <td>Coffee Break</td>
                                 </tr>
                                 <tr>
-                                    <td>17:00 - 17:15</td>
-                                    <td><strong>Closing Remarks</strong></td>
+                                    <td>15.30 - 16.45</td>
+                                    <td><strong>Panel Discussion</strong> (1 hr) &amp; Q&amp;A (15 min)<br>Fernando Diaz</td>
+                                </tr>
+                                <tr>
+                                    <td>16.45 - 17.00</td>
+                                    <td><strong>Closing Remarks</strong><br>Summary and next steps</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -217,108 +249,141 @@
         <!-- Speakers Section -->
         <section id="speakers" class="section section-gray">
             <div class="container">
-                <h2 class="section-title">Keynotes & Invited Speakers</h2>
-                <div class="speakers-grid">
-                    <div class="speaker-card">
-                        <img src="assets/img/speakers/mark-sanderson.jpg" alt="Mark Sanderson" class="speaker-photo">
-                        <div class="speaker-info">
-                            <h3><a href="https://marksanderson.org/" target="_blank" rel="noopener noreferrer">Mark Sanderson</a></h3>
-                            <p class="speaker-affiliation">RMIT University</p>
-                            <p class="speaker-bio">Mark Sanderson is Professor of Information Retrieval at RMIT University and Dean of Research for the STEM College. He is widely recognized for his early work demonstrating the value of search result snippets, which are now a standard feature of modern search engines. His research spans information retrieval, web search, and human information interaction, with a particular focus on how users engage with and benefit from search systems.</p>
+                <h2 class="section-title">Keynote Speakers &amp; Panel</h2>
+                <div class="speaker-section">
+                    <h3 class="speaker-subsection-title">Keynote Speakers</h3>
+                    <div class="speakers-grid">
+                        <div class="speaker-card">
+                            <img src="assets/img/speakers/mark-sanderson.jpg" alt="Mark Sanderson" class="speaker-photo">
+                            <div class="speaker-info">
+                                <h3><a href="https://marksanderson.org/" target="_blank" rel="noopener noreferrer">Mark Sanderson</a></h3>
+                                <p class="speaker-affiliation">RMIT University</p>
+                                <p class="speaker-bio">Mark Sanderson is Professor of Information Retrieval at RMIT University and Dean of Research for the STEM College. He is widely recognized for his early work demonstrating the value of search result snippets, which are now a standard feature of modern search engines. His research spans information retrieval, web search, and human information interaction, with a particular focus on how users engage with and benefit from search systems.</p>
+                            </div>
+                        </div>
+
+                        <div class="speaker-card">
+                            <img src="assets/img/speakers/olivier-jeunen.png" alt="Olivier Jeunen" class="speaker-photo">
+                            <div class="speaker-info">
+                                <h3><a href="https://olivierjeunen.github.io/" target="_blank" rel="noopener noreferrer">Olivier Jeunen</a></h3>
+                                <p class="speaker-affiliation">Independent Researcher; Science Contractor, Booking.com</p>
+                                <p class="speaker-bio">Olivier Jeunen is an independent researcher and science contractor collaborating with Booking.com. He previously held research positions at Amazon, Spotify, Meta, and others. His research focuses on machine learning for decision-making, marrying probability-theoretic foundations with applications in recommendation and personalisation. His work has resulted in over 50 publications and multiple recognitions for research as well as reviewing. He served as co-Industry Chair for ECIR '24, RecSys '25, and UMAP '27.</p>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+
+                <div class="panel-section">
+                    <h3 class="speaker-subsection-title">Panel Discussion</h3>
+
+                    <div class="panel-group">
+                        <div class="panel-grid">
+                            <div class="panel-person-card">
+                                <a href="https://841.io/" target="_blank" rel="noopener noreferrer" class="panel-person-link">
+                                    <img src="assets/img/organizers/fernando-diaz.jpg" alt="Fernando Diaz" class="panel-person-photo">
+                                    <span class="panel-person-role">Chair</span>
+                                    <h4>Fernando Diaz</h4>
+                                    <p>Carnegie Mellon University</p>
+                                </a>
+                            </div>
+
+                            <div class="panel-person-card">
+                                <a href="https://marksanderson.org/" target="_blank" rel="noopener noreferrer" class="panel-person-link">
+                                    <img src="assets/img/speakers/mark-sanderson.jpg" alt="Mark Sanderson" class="panel-person-photo">
+                                    <span class="panel-person-role">Panelist</span>
+                                    <h4>Mark Sanderson</h4>
+                                    <p>RMIT University</p>
+                                </a>
+                            </div>
+
+                            <div class="panel-person-card">
+                                <a href="https://czhai.cs.illinois.edu/" target="_blank" rel="noopener noreferrer" class="panel-person-link">
+                                    <img src="assets/img/speakers/chengxiang-zhai.png" alt="ChengXiang Zhai" class="panel-person-photo">
+                                    <span class="panel-person-role">Panelist</span>
+                                    <h4>ChengXiang Zhai</h4>
+                                    <p>University of Illinois Urbana-Champaign</p>
+                                </a>
+                            </div>
+
+                            <div class="panel-person-card">
+                                <a href="https://ruc-iir-lab.github.io/team/junxu_en" target="_blank" rel="noopener noreferrer" class="panel-person-link">
+                                    <img src="assets/img/speakers/jun-xu.jpg" alt="Jun Xu" class="panel-person-photo">
+                                    <span class="panel-person-role">Panelist</span>
+                                    <h4>Jun Xu</h4>
+                                    <p>Renmin University of China</p>
+                                </a>
+                            </div>
+
+                            <div class="panel-person-card">
+                                <a href="https://negara.info/" target="_blank" rel="noopener noreferrer" class="panel-person-link">
+                                    <img src="assets/img/speakers/negar-arabzadeh.avif" alt="Negar Arabzadeh" class="panel-person-photo">
+                                    <span class="panel-person-role">Panelist</span>
+                                    <h4>Negar Arabzadeh</h4>
+                                    <p>UC Berkeley</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    
-                    <!-- <div class="speaker-card">
-                        <img src="assets/img/speakers/edgar-meij.jpg" alt="Edgar Meij" class="speaker-photo">
-                        <div class="speaker-info">
-                            <h3><a href="https://edgar.meij.pro/" target="_blank" rel="noopener noreferrer">Edgar Meij</a></h3>
-                            <p class="speaker-affiliation">Bloomberg</p>
-                            <p class="speaker-bio">Edgar Meij is Head of AI Platforms within Bloomberg's Artificial Intelligence group, where he leads more than ten teams of engineers and researchers responsible for the company's core AI, NLP, machine learning, large language model, and search technology platforms. His expertise includes information retrieval, natural language processing, knowledge graphs, semantic search, and large-scale computing infrastructure.</p>
-                        </div>
-                    </div> -->
                 </div>
-                <p class="speakers-note">More speakers to be announced soon.</p>
             </div>
         </section>
 
-        <!-- Call for Papers Section -->
-        <section id="cfp" class="section">
+        <!-- Accepted Papers Section -->
+        <section id="accepted-papers" class="section">
             <div class="container">
-                <h2 class="section-title">Call for Papers</h2>
+                <h2 class="section-title">Accepted Papers</h2>
                 <div class="section-content">
-                    <p>The first workshop on Indexing, Retrieval, and Ranking of AI Agents is accepting submissions that describe original research findings, preliminary research results, proposals for new work, and recent relevant studies already published in high-quality venues.</p>
-                    
-                    <div class="cfp-topics-ref" style="margin-bottom:1em;">
-                                            <strong>Topics of Interest:</strong> (1) Representation & Discovery of Agents; (2) Retrieval, Ranking & Recommendation of Agents; (3) Evaluation & Benchmarking of Agent Search; (4) Responsible & Human-Centered Agent Search and (5) related areas. <a href="#topics" class="cfp-topics-link">See full list</a>
-                    </div>
+                    <p class="accepted-papers-note">This year, AgentSearch accepted 11 papers. Expand the list below to view paper titles, authors, and links.</p>
 
-                    <h3>Submission Types</h3>
-                    We welcome various types of submissions:
-                    <ul class="cfp-list">
-                        <li>
-                            <strong>Extended Abstracts:</strong>
-                            A concise summary of work in progress or preliminary findings, outlining the main contribution and approach.
-                            <br>
-                            At most 2 pages (excluding references).
-                        </li>
-                        <li>
-                            <strong>Research, Perspective, and Demo Papers:</strong>
-                            We welcome original or recently published research on indexing, retrieval, and ranking of AI agents; 
-                            perspective papers that suggest future directions and research opportunities; 
-                            and demo papers that showcase systems for agent search. 
-                            Submissions may follow the relevant SIGIR track guidelines (short/full papers, perspectives, or demonstrations).
-                            <br>
-                            4-9 pages (excluding references).
-                        </li>
-                    </ul>
-                    
-                    <h3>Submission Instructions</h3>
-                    <p>
-                        Page limit does not include references. All content, including any appendix, must fit within the page limit.
-                        Note that we care more about the quality of the submission and its potential to spur discussion at the workshop than about page length as long as the paper meets the page limits.
-                    </p>
-                    <p>
-                        At least one author of each accepted paper must register for the workshop and present the paper in person (strongly preferred) or remotely.
-                    </p>
-                    <p>
-                        We encourage, but do not require, authors to release any code and/or datasets associated with their paper.
-                        For demo papers, we particularly encourage anonymous code submission (e.g., via a link in the anonymized paper).
-                    </p>
-                    <p>
-                        All submissions must be in PDF format and written in English.
-                        Please use the <a href="https://sigir2026.org/en-AU/pages/submissions/full-papers-track" target="_blank" rel="noopener">SIGIR 2026 template (ACM two-column format)</a>.
-
-                        For LaTeX, the following should be used:
-                        <br>
-                        <code>\documentclass[sigconf,natbib=true,anonymous=true]{acmart}</code>
-                    </p>
-                    <p>
-                        All submissions will be <strong>double-blind</strong> reviewed by the program committee and judged by their relevance to the workshop, especially to the main themes identified above, and their potential to generate discussion. 
-                        Submissions should be made through EasyChair: <a href="https://easychair.org/conferences/?conf=agentsearch2026" target="_blank" rel="noopener">https://easychair.org/conferences/?conf=agentsearch2026</a>, and code should be submitted anonymously.
-                        When submitting, select one of the paper types (Extended Abstract, Research, Perspective, or Demo).
-                    </p>
-                    
-                    <p class="cfp-note">
-                        <strong>Note:</strong> This is a non-archival workshop. 
-                        Accepted papers may be uploaded to arXiv.org, allowing submission elsewhere as they will be considered non-archival. 
-                        The workshop's website will maintain a link to the arXiv versions of the papers.
-                        Authors retain full copyright and are free to submit to other venues.
-                    </p>
-                    
-                    <div class="cfp-dates">
-                        <h3>Important Dates</h3>
-                        <ul class="dates-list">
-                            <li><strong>Paper Submission Deadline:</strong> <del>April 15, 2026 (AoE)</del> May 8, 2026 (AoE)</li>
-                            <li><strong>Notification of Acceptance:</strong> May 20, 2026 (AoE)</li>
-                            <li><strong>Camera-Ready Deadline:</strong> TBD</li>
-                            <li><strong>Workshop Date:</strong> July 24, 2026</li>
+                    <details class="accepted-papers-details">
+                        <summary>Show accepted papers</summary>
+                        <ul class="accepted-papers-list">
+                            <li class="accepted-paper">
+                                <h3><a href="https://arxiv.org/abs/2605.27361" target="_blank" rel="noopener noreferrer">Natural Language Query to Configuration for Retrieval Agents</a></h3>
+                                <p class="accepted-paper-authors">Melissa Pan, Negar Arabzadeh, Mathew Jacob, Fiodar Kazhamiaka, Esha Choukse, and Matei Zaharia</p>
+                            </li>
+                            <li class="accepted-paper">
+                                <h3>RouteRec: Strict Evaluation of Recommender-Agent Selection and Aggregation</h3>
+                                <p class="accepted-paper-authors">Kaiji Zhou, Vladimir Kalmykov, and Yue Feng</p>
+                            </li>
+                            <li class="accepted-paper">
+                                <h3><a href="http://arxiv.org/abs/2606.29270" target="_blank" rel="noopener noreferrer">Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates</a></h3>
+                                <p class="accepted-paper-authors">Chuan He, Zebin Chen, Zhengyi Yang, Shaobo Qiao, Mingchen Ju, Jiate Liu, Dong Wen, and Guanfeng Liu</p>
+                            </li>
+                            <li class="accepted-paper">
+                                <h3><a href="https://arxiv.org/abs/2605.21969" target="_blank" rel="noopener noreferrer">LLM Retrieval for Stable and Predictable Ad Recommendations</a></h3>
+                                <p class="accepted-paper-authors">Vinodh Kumar Sunkara, Satheeshkumar Karuppusamy, Hangjun Xu, Sai Deepika Regani, Kshitij Gupta, Gaby Nahum, Sneha Iyer, Jean-Baptiste Fiot, Yinglong Guo, Xiaowen Guo, Atul Jangra, Yucheng Liu, Jinghao Yan, Vijay Pappu, Benjamin Schulte, and Deepak Chandra</p>
+                            </li>
+                            <li class="accepted-paper">
+                                <h3><a href="https://arxiv.org/pdf/2606.31665" target="_blank" rel="noopener noreferrer">ForecastAgentSearch: Towards a Multi-Expert Agent Search System for Geopolitical Event Forecasting</a></h3>
+                                <p class="accepted-paper-authors">Miaomiao Cai, He Chang, Yunshan Ma, and See-Kiong Ng</p>
+                            </li>
+                            <li class="accepted-paper">
+                                <h3>Adapting Embedding Models for Agent Capability Retrieval</h3>
+                                <p class="accepted-paper-authors">Tingwei Chen, Yunxiao Shi, Zhengdong Chu, Qingsong Wen, and Min Xu</p>
+                            </li>
+                            <li class="accepted-paper">
+                                <h3>SLMs as Multi-Agent Routers: A Progressive SFT and Reinforcement Learning Approach</h3>
+                                <p class="accepted-paper-authors">Gayathri Kondapalli, Alexander Yew Shen Ng, Hirsh Pithadia, Rahul Monish, and Harvey Yorke</p>
+                            </li>
+                            <li class="accepted-paper">
+                                <h3><a href="https://arxiv.org/abs/2510.24636" target="_blank" rel="noopener noreferrer">OpenReward: Enabling Agentic Reward Models for Long-Form Knowledge-Intensive Tasks</a></h3>
+                                <p class="accepted-paper-authors">Ziyou Hu, Zhengliang Shi, Minghang Zhu, Haitao Li, Teng Sun, Pengjie Ren, Suzan Verberne, and Zhaochun Ren</p>
+                            </li>
+                            <li class="accepted-paper">
+                                <h3>LLM within MCP Matters: Measuring Inefficient Resource Utilization Driven by LLMs</h3>
+                                <p class="accepted-paper-authors">Minhan Cho, Soyoung Park, Byungkyu Jeon, Kihyun Jeong, Daejin Choi, and Jinyoung Han</p>
+                            </li>
+                            <li class="accepted-paper">
+                                <h3>Towards Agentic Governance: A Unified Measure for Agentic AI Systems</h3>
+                                <p class="accepted-paper-authors">Waqar Ali, Kifayat Ullah, Rajesh Kumar, and Youhao Zhang</p>
+                            </li>
+                            <li class="accepted-paper">
+                                <h3>Representation Affects Retrieval: A Case Study of Skill Discovery and Routing in a Multimodal Agent Harness</h3>
+                                <p class="accepted-paper-authors">Kevin Dela Rosa</p>
+                            </li>
                         </ul>
-                    </div>
-                    
-                    <div class="cfp-button-wrapper">
-                        <a href="https://easychair.org/conferences/?conf=agentsearch2026" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Submit Your Paper</a>
-                        <!-- <a class="btn btn-disabled" target="_blank" rel="noopener noreferrer">Submit Your Paper</a> -->
-                    </div>
+                    </details>
                 </div>
             </div>
         </section>
