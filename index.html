@@ -148,7 +148,7 @@
             <div class="container">
                 <h2 class="section-title">Workshop Program</h2>
                 <div class="section-content">
-                    <p class="program-note">The workshop features an interactive format including keynotes, invited talks, oral presentations, poster presentations, and a panel discussion.</p>
+                    <p class="program-note">The workshop will be held in <strong>Eureka 1</strong> and features an interactive format including keynotes, invited talks, oral presentations, poster presentations, and a panel discussion.</p>
                     
                     <div class="schedule-wrapper">
                         <table class="schedule-table">
@@ -179,7 +179,16 @@
                                 </tr>
                                 <tr>
                                     <td>09.45 - 10.00</td>
-                                    <td><strong>Invited Talk 1</strong><br>To Eun Kim</td>
+                                    <td>
+                                        <strong>Invited Talk 1</strong><br>
+                                        To Eun Kim<br>
+                                        <span class="talk-title">Evaluation of Agents under Simulated AI Marketplace Dynamics</span>
+                                        <details class="talk-abstract">
+                                            <summary>Abstract</summary>
+                                            <p>Modern information access ecosystems consist of mixtures of systems, such as retrieval systems and large language models, and increasingly rely on marketplaces to mediate access to models, tools, and data, making competition between systems inherent to deployment. In such settings, outcomes are shaped not only by benchmark quality but also by competitive pressure, including user switching, routing decisions, and operational constraints. Yet evaluation is still largely conducted on static benchmarks with accuracy-focused measures that assume systems operate in isolation. This mismatch makes it difficult to predict post-deployment success and obscures competitive effects such as early-adoption advantages and market dominance.</p>
+                                            <p>We introduce Marketplace Evaluation, a simulation-based paradigm that evaluates information access systems as participants in a competitive marketplace. By simulating repeated interactions and evolving user and agent preferences, the framework enables longitudinal evaluation and marketplace-level metrics, such as retention and market share, that complement and can extend beyond traditional accuracy-based metrics. We formalize the framework and outline a research agenda, motivated by business and economics, around marketplace simulation, metrics, optimization, and adoption in evaluation campaigns like TREC.</p>
+                                        </details>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>10.00 - 10.15</td>
@@ -208,7 +217,7 @@
                                 <tr>
                                     <td>13.30 - 14.00</td>
                                     <td>
-                                        <strong>Keynote 3</strong><br>
+                                        <strong>Keynote 2</strong><br>
                                         Mark Sanderson<br>
                                         <span class="talk-title">From Distributed Digital Libraries to Agent Search: Lessons from TREC's Million LLM Track and the Emerging Information Landscape</span>
                                         <details class="talk-abstract">
@@ -221,7 +230,17 @@
                                 </tr>
                                 <tr>
                                     <td>14.00 - 14.15</td>
-                                    <td><strong>Invited Talk 2</strong><br>Fengyu Cai</td>
+                                    <td>
+                                        <strong>Invited Talk 2</strong><br>
+                                        Fengyu Cai<br>
+                                        <span class="talk-title">Beyond Contrastive Pairs: Language Modeling as a Learning Signal for Dense Retrieval</span>
+                                        <details class="talk-abstract">
+                                            <summary>Abstract</summary>
+                                            <p>Dense retrieval is trained almost universally with contrastive learning over (query, positive, negative) pairs, a recipe that is expensive to curate and teaches only a coarse, binary notion of relevance. Two benchmarks make the cost concrete: on CoQuIR, state-of-the-art retrievers are largely blind to code quality, ranking buggy, inefficient, insecure, or deprecated code as highly as sound code; on CodeMMR, strong embedders fail on multimodal code retrieval, and each new axis of difficulty demands yet another mountain of curated pairs.</p>
+                                            <p>I argue the real bottleneck is the learning signal itself, and present an alternative: supervise retrievers with a language-modeling objective. The core method, Revela, trains a dense retriever from raw, unlabeled text through a single next-token-prediction loss: retriever-computed similarities reweight cross-chunk attention inside a language model, so that predicting one chunk's tokens from its in-batch neighbors backpropagates jointly into both the LM and the retriever, with no queries, labels, or negative mining. Despite using a fraction of the data and compute, Revela matches or surpasses supervised and API retrievers on code, reasoning, and general benchmarks.</p>
+                                            <p>The same architecture extends to supervision: ElicitR adds this language-modeling signal as a regularizer alongside contrastive training, eliciting latent reasoning ability that pure contrastive fine-tuning tends to suppress. Together, they show that a language model's own predictive signal is a rich, scalable, and largely untapped source of supervision for retrieval.</p>
+                                        </details>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>14.15 - 15.00</td>
@@ -544,7 +563,7 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 AgentSearch Workshop. Part of SIGIR 2026 Conference.</p>
-            <p class="footer-update">Last updated: April 15, 2026</p>
+            <p class="footer-update">Last updated: July 22, 2026</p>
             <!-- Visitor Counter -->
             <div class="visitor-counter">
                 <a href="https://info.flagcounter.com/ysKc" target="_blank" rel="noopener noreferrer">

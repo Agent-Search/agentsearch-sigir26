@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgentSearch @ SIGIR 2026 - Programme & People</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    @page { size: A4 portrait; margin: 0; }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    :root {
+      --teal: #14b8a6;
+      --teal-dk: #0f766e;
+      --teal-lt: #5eead4;
+      --purple: #8b5cf6;
+      --purple-dk: #7c3aed;
+      --navy: #0f172a;
+      --slate: #334155;
+      --mid: #64748b;
+      --muted: #94a3b8;
+      --border: #e2e8f0;
+      --gray: #f8fafc;
+      --dark: #1e293b;
+      --white: #ffffff;
+    }
+    html {
+      align-items: flex-start;
+      background: #d1d5db;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px 0 48px;
+    }
+    body {
+      background: var(--white);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+      color: var(--navy);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      height: 297mm;
+      overflow: hidden;
+      position: relative;
+      width: 210mm;
+    }
+    @media print {
+      html { background: white; display: block; padding: 0; }
+      body { box-shadow: none; }
+    }
+    .poster {
+      display: grid;
+      grid-template-rows: 36mm 1fr 30mm;
+      height: 297mm;
+      position: relative;
+      width: 210mm;
+    }
+    .poster::before {
+      background: url("assets/img/hero-background.jpg") center/cover no-repeat;
+      content: "";
+      inset: 0;
+      opacity: 0.055;
+      position: absolute;
+      z-index: 0;
+    }
+    .header {
+      background: linear-gradient(125deg, #0a5e58 0%, #0f766e 22%, #14b8a6 48%, #6d28d9 82%, #8b5cf6 100%);
+      color: white;
+      overflow: hidden;
+      padding: 4.4mm 7mm;
+      position: relative;
+      z-index: 1;
+    }
+    .header::after {
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 50%;
+      content: "";
+      height: 78mm;
+      position: absolute;
+      right: -8mm;
+      top: -30mm;
+      width: 78mm;
+    }
+    .topline {
+      align-items: flex-start;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2.6mm;
+      position: relative;
+      z-index: 1;
+    }
+    .badge {
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.38);
+      border-radius: 20mm;
+      color: white;
+      display: inline-flex;
+      font-size: 6.6pt;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      padding: 1mm 3.2mm;
+      text-transform: uppercase;
+    }
+    .meta {
+      color: rgba(255,255,255,0.82);
+      font-size: 7pt;
+      font-weight: 600;
+      line-height: 1.5;
+      text-align: right;
+    }
+    .meta strong {
+      color: white;
+      display: block;
+      font-size: 8.8pt;
+    }
+    h1 {
+      color: white;
+      font-size: 22.5pt;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      line-height: 1;
+      margin-bottom: 2mm;
+      position: relative;
+      z-index: 1;
+    }
+    .subtitle {
+      color: rgba(255,255,255,0.94);
+      font-size: 9pt;
+      font-weight: 600;
+      line-height: 1.35;
+      position: relative;
+      z-index: 1;
+    }
+    .content {
+      display: grid;
+      gap: 4mm;
+      grid-template-columns: 96mm 1fr;
+      min-height: 0;
+      padding: 3.8mm 7mm 3mm;
+      position: relative;
+      z-index: 1;
+    }
+    .left, .right {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+    .section {
+      margin-bottom: 2.2mm;
+    }
+    .section:last-child { margin-bottom: 0; }
+    .section-title {
+      align-items: center;
+      color: var(--slate);
+      display: flex;
+      font-size: 7pt;
+      font-weight: 800;
+      gap: 2.3mm;
+      letter-spacing: 1.3px;
+      margin-bottom: 1.7mm;
+      text-transform: uppercase;
+    }
+    .section-title::before {
+      background: linear-gradient(180deg, var(--teal), var(--purple));
+      border-radius: 2px;
+      content: "";
+      height: 4mm;
+      width: 2.5px;
+    }
+    .venue-strip {
+      align-items: center;
+      background: linear-gradient(120deg, rgba(20,184,166,0.09), rgba(139,92,246,0.09));
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--teal);
+      border-radius: 5px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4mm;
+      margin-bottom: 2.8mm;
+      padding: 2.7mm 3.2mm;
+    }
+    .venue-strip strong {
+      color: var(--teal-dk);
+      display: block;
+      font-size: 12.5pt;
+      line-height: 1;
+      margin-top: 0.7mm;
+      text-transform: uppercase;
+    }
+    .venue-strip span {
+      color: var(--mid);
+      font-size: 6.3pt;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .qr img {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      display: block;
+      height: 20mm;
+      width: 20mm;
+    }
+    .schedule {
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .slot {
+      display: grid;
+      grid-template-columns: 21mm 1fr;
+    }
+    .slot + .slot { border-top: 1px solid var(--border); }
+    .time {
+      background: var(--gray);
+      color: var(--teal-dk);
+      font-size: 6pt;
+      font-weight: 800;
+      line-height: 1.25;
+      padding: 1.65mm 2mm;
+    }
+    .agenda {
+      background: white;
+      color: var(--slate);
+      font-size: 5.9pt;
+      line-height: 1.24;
+      padding: 1.55mm 2.2mm;
+    }
+    .agenda strong {
+      color: var(--navy);
+      display: block;
+      font-size: 6.35pt;
+      margin-bottom: 0.45mm;
+    }
+    .agenda .talk {
+      color: var(--teal-dk);
+      font-weight: 700;
+    }
+    .people-grid {
+      display: grid;
+      gap: 2mm;
+    }
+    .people-grid.two { grid-template-columns: 1fr 1fr; }
+    .people-grid.three { grid-template-columns: repeat(3, 1fr); }
+    .person {
+      align-items: center;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      display: grid;
+      gap: 1.7mm;
+      grid-template-columns: 15mm 1fr;
+      min-height: 16mm;
+      padding: 1.3mm;
+    }
+    .person.featured {
+      align-items: start;
+      grid-template-columns: 20mm 1fr;
+      min-height: 24mm;
+      padding: 1.6mm;
+    }
+    .avatar {
+      background: linear-gradient(135deg, var(--teal-dk), var(--purple-dk));
+      border: 1.5px solid var(--border);
+      border-radius: 50%;
+      color: white;
+      display: grid;
+      font-size: 8pt;
+      font-weight: 800;
+      height: 15mm;
+      place-items: center;
+      width: 15mm;
+    }
+    .featured .avatar {
+      border-radius: 6px;
+      height: 20mm;
+      object-fit: cover;
+      width: 20mm;
+    }
+    img.avatar { display: block; object-fit: cover; object-position: top center; }
+    .role {
+      color: var(--purple-dk);
+      display: block;
+      font-size: 5.2pt;
+      font-weight: 800;
+      letter-spacing: 0.9px;
+      margin-bottom: 0.5mm;
+      text-transform: uppercase;
+    }
+    .name {
+      color: var(--navy);
+      display: block;
+      font-size: 6.8pt;
+      font-weight: 800;
+      line-height: 1.15;
+    }
+    .featured .name { font-size: 8pt; }
+    .affil {
+      color: var(--mid);
+      display: block;
+      font-size: 5.2pt;
+      font-weight: 600;
+      line-height: 1.25;
+      margin-top: 0.5mm;
+    }
+    .talk-title {
+      color: var(--teal-dk);
+      display: block;
+      font-size: 5.9pt;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-top: 0.8mm;
+    }
+    .compact-panel {
+      background: var(--gray);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 2mm;
+    }
+    .panel-list {
+      display: grid;
+      gap: 1.8mm;
+      grid-template-columns: 1fr 1fr;
+    }
+    .panel-list .person {
+      background: white;
+      grid-template-columns: 13mm 1fr;
+      min-height: 14mm;
+      padding: 1.1mm;
+    }
+    .panel-list .avatar {
+      height: 12mm;
+      width: 12mm;
+    }
+    .papers-list {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .paper {
+      border-bottom: 1px solid var(--border);
+      color: var(--slate);
+      font-size: 5pt;
+      font-weight: 650;
+      line-height: 1.2;
+      min-height: 5.8mm;
+      padding: 0.85mm 1.2mm 0.85mm 5.8mm;
+      position: relative;
+    }
+    .paper:last-child { border-bottom: 0; }
+    .paper::before {
+      color: var(--teal-dk);
+      content: attr(data-id);
+      font-size: 4.5pt;
+      font-weight: 800;
+      left: 1.5mm;
+      position: absolute;
+      top: 0.95mm;
+    }
+    .footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.86);
+      padding: 2.4mm 7mm;
+      position: relative;
+      z-index: 1;
+    }
+    .organizer-row {
+      display: grid;
+      gap: 2mm;
+      grid-template-columns: repeat(6, 1fr);
+    }
+    .organizer {
+      text-align: center;
+    }
+    .organizer img {
+      background: #334155;
+      border: 1.5px solid rgba(255,255,255,0.22);
+      border-radius: 50%;
+      display: block;
+      height: 13.5mm;
+      margin: 0 auto 0.9mm;
+      object-fit: cover;
+      object-position: top center;
+      width: 13.5mm;
+    }
+    .organizer strong {
+      color: white;
+      display: block;
+      font-size: 5.8pt;
+      font-weight: 700;
+      line-height: 1.15;
+      white-space: nowrap;
+    }
+    .organizer span {
+      color: rgba(255,255,255,0.46);
+      display: block;
+      font-size: 4.9pt;
+      line-height: 1.2;
+      margin-top: 0.5mm;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <main class="poster">
+    <header class="header">
+      <div class="topline">
+        <div class="badge">Programme & People</div>
+        <div class="meta">
+          <strong>SIGIR 2026 Workshop</strong>
+          July 24, 2026 · Eureka 1 · Melbourne | Naarm
+        </div>
+      </div>
+      <h1>AgentSearch Workshop</h1>
+      <p class="subtitle">The First Workshop on Indexing, Retrieval, and Ranking of AI Agents</p>
+    </header>
+
+    <section class="content">
+      <div class="left">
+        <div class="venue-strip">
+          <div>
+            <span>Workshop Venue</span>
+            <strong>Eureka 1</strong>
+          </div>
+          <div class="qr">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Fagent-search.github.io%2Fagentsearch-sigir26%2F&color=0f766e&bgcolor=ffffff&ecc=M" alt="QR code for workshop website">
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Programme</h2>
+          <div class="schedule">
+            <div class="slot"><div class="time">09.00<br>09.15</div><div class="agenda"><strong>Opening</strong>Welcome and workshop framing</div></div>
+            <div class="slot"><div class="time">09.15<br>09.45</div><div class="agenda"><strong>Keynote 1</strong>Olivier Jeunen<br><span class="talk">Agent Evaluation is Policy Evaluation</span></div></div>
+            <div class="slot"><div class="time">09.45<br>10.00</div><div class="agenda"><strong>Invited Talk 1</strong>To Eun Kim<br><span class="talk">Evaluation of Agents under Simulated AI Marketplace Dynamics</span></div></div>
+            <div class="slot"><div class="time">10.00<br>10.15</div><div class="agenda"><strong>Challenge Overview</strong>Bin Wu</div></div>
+            <div class="slot"><div class="time">10.15<br>10.30</div><div class="agenda"><strong>Paper Presentation 1</strong>Natural Language Query to Configuration for Retrieval Agents</div></div>
+            <div class="slot"><div class="time">10.30<br>11.00</div><div class="agenda"><strong>Coffee Break</strong></div></div>
+            <div class="slot"><div class="time">11.00<br>11.30</div><div class="agenda"><strong>Paper Presentation 2</strong>Adapting Embedding Models for Agent Capability Retrieval<br>Multi-Expert Agent Search for Geopolitical Event Forecasting</div></div>
+            <div class="slot"><div class="time">11.30<br>12.30</div><div class="agenda"><strong>Poster Presentation</strong>Accepted workshop papers</div></div>
+            <div class="slot"><div class="time">12.30<br>13.30</div><div class="agenda"><strong>Lunch Break</strong></div></div>
+            <div class="slot"><div class="time">13.30<br>14.00</div><div class="agenda"><strong>Keynote 2</strong>Mark Sanderson<br><span class="talk">From Distributed Digital Libraries to Agent Search</span></div></div>
+            <div class="slot"><div class="time">14.00<br>14.15</div><div class="agenda"><strong>Invited Talk 2</strong>Fengyu Cai<br><span class="talk">Beyond Contrastive Pairs: Language Modeling as a Learning Signal for Dense Retrieval</span></div></div>
+            <div class="slot"><div class="time">14.15<br>15.00</div><div class="agenda"><strong>Workshop Paper Presentation 3</strong>(oral presentations)<br>Paper 7761: RouteRec: Strict Evaluation of Recommender-Agent Selection and Aggregation<br>Paper 0318: Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates<br>Paper 4831: LLM Retrieval for Stable and Predictable Ad Recommendations</div></div>
+            <div class="slot"><div class="time">15.00<br>15.30</div><div class="agenda"><strong>Coffee Break</strong></div></div>
+            <div class="slot"><div class="time">15.30<br>16.45</div><div class="agenda"><strong>Panel Discussion</strong>Chair: Fernando Diaz · Panel and Q&amp;A</div></div>
+            <div class="slot"><div class="time">16.45<br>17.00</div><div class="agenda"><strong>Closing Remarks</strong>Summary and next steps</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="section">
+          <h2 class="section-title">Keynote Speakers</h2>
+          <div class="people-grid">
+            <div class="person featured">
+              <img src="assets/img/speakers/mark-sanderson.jpg" alt="Mark Sanderson" class="avatar">
+              <div><span class="role">Keynote</span><span class="name">Mark Sanderson</span><span class="affil">RMIT University</span><span class="talk-title">From Distributed Digital Libraries to Agent Search</span></div>
+            </div>
+            <div class="person featured">
+              <img src="assets/img/speakers/olivier-jeunen.png" alt="Olivier Jeunen" class="avatar">
+              <div><span class="role">Keynote</span><span class="name">Olivier Jeunen</span><span class="affil">Independent Researcher; Science Contractor, Booking.com</span><span class="talk-title">Agent Evaluation is Policy Evaluation</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Invited Talks</h2>
+          <div class="people-grid two">
+            <div class="person">
+              <img src="assets/img/organizers/toeun-kim.jpeg" alt="To Eun Kim" class="avatar">
+              <div><span class="role">Invited Talk</span><span class="name">To Eun Kim</span><span class="affil">Carnegie Mellon University</span><span class="talk-title">Evaluation of Agents under Simulated AI Marketplace Dynamics</span></div>
+            </div>
+            <div class="person">
+              <img src="assets/img/speakers/fengyu-cai.png" alt="Fengyu Cai" class="avatar">
+              <div><span class="role">Invited Talk</span><span class="name">Fengyu Cai</span><span class="affil">TU Darmstadt</span><span class="talk-title">Beyond Contrastive Pairs: Language Modeling as a Learning Signal for Dense Retrieval</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section compact-panel">
+          <h2 class="section-title">Panel Discussion</h2>
+          <div class="panel-list">
+            <div class="person"><img src="assets/img/organizers/fernando-diaz.jpg" alt="Fernando Diaz" class="avatar"><div><span class="role">Chair</span><span class="name">Fernando Diaz</span><span class="affil">Carnegie Mellon University</span></div></div>
+            <div class="person"><img src="assets/img/speakers/mark-sanderson.jpg" alt="Mark Sanderson" class="avatar"><div><span class="role">Panelist</span><span class="name">Mark Sanderson</span><span class="affil">RMIT University</span></div></div>
+            <div class="person"><img src="assets/img/speakers/chengxiang-zhai.png" alt="ChengXiang Zhai" class="avatar"><div><span class="role">Panelist</span><span class="name">ChengXiang Zhai</span><span class="affil">University of Illinois Urbana-Champaign</span></div></div>
+            <div class="person"><img src="assets/img/speakers/jun-xu.jpg" alt="Jun Xu" class="avatar"><div><span class="role">Panelist</span><span class="name">Jun Xu</span><span class="affil">Renmin University of China</span></div></div>
+            <div class="person"><img src="assets/img/speakers/negar-arabzadeh.avif" alt="Negar Arabzadeh" class="avatar"><div><span class="role">Panelist</span><span class="name">Negar Arabzadeh</span><span class="affil">UC Berkeley</span></div></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Accepted Papers</h2>
+          <div class="papers-list">
+            <div class="paper" data-id="1">Natural Language Query to Configuration for Retrieval Agents</div>
+            <div class="paper" data-id="2">RouteRec: Strict Evaluation of Recommender-Agent Selection and Aggregation</div>
+            <div class="paper" data-id="3">Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates</div>
+            <div class="paper" data-id="4">LLM Retrieval for Stable and Predictable Ad Recommendations</div>
+            <div class="paper" data-id="5">ForecastAgentSearch: Towards a Multi-Expert Agent Search System for Geopolitical Event Forecasting</div>
+            <div class="paper" data-id="6">Adapting Embedding Models for Agent Capability Retrieval</div>
+            <div class="paper" data-id="7">SLMs as Multi-Agent Routers: A Progressive SFT and Reinforcement Learning Approach</div>
+            <div class="paper" data-id="8">OpenReward: Enabling Agentic Reward Models for Long-Form Knowledge-Intensive Tasks</div>
+            <div class="paper" data-id="9">LLM within MCP Matters: Measuring Inefficient Resource Utilization Driven by LLMs</div>
+            <div class="paper" data-id="10">Towards Agentic Governance: A Unified Measure for Agentic AI Systems</div>
+            <div class="paper" data-id="11">Representation Affects Retrieval: Skill Discovery and Routing in a Multimodal Agent Harness</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <h2 class="section-title">Organizers</h2>
+      <div class="organizer-row">
+        <div class="organizer"><img src="assets/img/organizers/bin-wu.jpg" alt="Bin Wu"><strong>Bin Wu</strong><span>UCL</span></div>
+        <div class="organizer"><img src="assets/img/organizers/toeun-kim.jpeg" alt="To Eun Kim"><strong>To Eun Kim</strong><span>CMU</span></div>
+        <div class="organizer"><img src="assets/img/organizers/yue-feng.jpeg" alt="Yue Feng"><strong>Yue Feng</strong><span>Univ. of Birmingham</span></div>
+        <div class="organizer"><img src="assets/img/organizers/fernando-diaz.jpg" alt="Fernando Diaz"><strong>Fernando Diaz</strong><span>CMU</span></div>
+        <div class="organizer"><img src="assets/img/organizers/zhaochun-ren.jpeg" alt="Zhaochun Ren"><strong>Zhaochun Ren</strong><span>Leiden Univ.</span></div>
+        <div class="organizer"><img src="assets/img/organizers/emine-yilmaz.jpg" alt="Emine Yilmaz"><strong>Emine Yilmaz</strong><span>UCL &amp; Amazon</span></div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
