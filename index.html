@@ -412,33 +412,25 @@
             <div class="container">
                 <h2 class="section-title">AgentSearch Challenge</h2>
                 <div class="section-content">
-                    <p>Participate in the first shared task on ranking AI agents given task descriptions. The challenge provides a benchmark for evaluating agent search systems in practical scenarios.</p>
+                    <p>Participate in the first shared task on retrieving and ranking AI agents. The challenge provides a benchmark grounded in real-world execution signals across nearly 10,000 agents drawn from multiple providers.</p>
                     
-                    <!-- <h3>Challenge Overview</h3>
-                    <p>Participants will develop systems that rank a collection of AI agents based on their suitability for completing specific tasks. Agents vary in their capabilities, API interfaces, performance characteristics, and domain expertise. The challenge includes diverse tasks spanning multiple domains to test the generalizability of ranking approaches.</p>
-                    
-                    <h3>Dataset & Tasks</h3>
-                    <ul class="challenge-list">
-                        <li><strong>Agent Collection:</strong> 500+ documented AI agents with capability descriptions, API specifications, and performance metadata</li>
-                        <li><strong>Task Queries:</strong> 200+ task descriptions covering information retrieval, data analysis, content generation, and decision support scenarios</li>
-                        <li><strong>Ground Truth:</strong> Relevance judgments based on agent execution results and expert assessments</li>
-                    </ul>
-                    
-                    <h3>Evaluation</h3>
-                    <p>Systems will be evaluated using standard IR metrics (NDCG, MAP, MRR) as well as task-specific metrics considering agent performance, cost, and latency. Participants can submit up to 5 runs for evaluation.</p>
-                     -->
-
                     <h3>Challenge Overview</h3>
-                    <p>Coming soon.</p>
-                    
-                    <h3>Dataset & Tasks</h3>
+                    <p>The challenge consists of two complementary tracks:</p>
                     <ul class="challenge-list">
-                        Coming soon.
+                        <li><strong>Retrieval</strong>: Given a natural language task specification, participants develop methods to retrieve the most relevant agents from a large-scale pool. This track evaluates the ability to surface strong candidate agents efficiently and accurately.</li>
+                        <li><strong>Reranking</strong>: Given a retrieved set of candidate agents, participants develop methods to rerank them using execution-aware signals, contextual features, and agent metadata. This track focuses on closing the gap between surface-level relevance and true task performance.</li>
                     </ul>
-                    
-                    <h3>Evaluation</h3>
-                    <p>Coming soon.</p>
-                    
+
+                    <h3>Dataset &amp; Tasks</h3>
+                    <ul class="challenge-list">
+                        <li><strong>Agent Collection:</strong> Collection of real-world agents with capability descriptions and metadata.</li>
+                        <li><strong>Task Specifications:</strong> Task descriptions and associated single-agent and multi-agent task queries.</li> 
+                        <li><strong>Ground Truth:</strong> Binary retrieval labels and graded ranking labels derived from execution traces.</li>
+                    </ul>
+                    <p>The dataset is available via <a href="https://huggingface.co/AgentSearch" target="_blank" rel="noopener noreferrer">HuggingFace Datasets</a> and <a href="https://drive.google.com/drive/folders/1821MfvwzCsTH22IkWwApnkkoeUz9UVTa?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive</a>.</p>
+
+                    <h3>Submission</h3>
+                    <p>Participants will be asked to submit ranked agent lists per query in the JSONL format. Please refer to the <a href="https://agent-search.github.io/agentsearch-challenge" target="_blank" rel="noopener noreferrer">challenge website</a> for full submission details and formatting guidelines.</p>
                     <div class="challenge-timeline">
                         <h3>Challenge Timeline</h3>
                         <ul class="dates-list">
@@ -448,10 +440,9 @@
                             <li><strong>Results Announcement:</strong> TBD</li>
                         </ul>
                     </div>
-                    
+
                     <div class="challenge-button-wrapper">
-                        <!-- <a href="https://github.com/agentsearch/challenge-2026" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join the Challenge</a> -->
-                        <a class="btn btn-disabled" target="_blank" rel="noopener noreferrer">Join the Challenge</a>
+                        <a href="https://agent-search.github.io/agentsearch-challenge" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Join the Challenge</a>
                     </div>
                 </div>
             </div>

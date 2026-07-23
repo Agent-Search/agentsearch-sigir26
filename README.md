@@ -2,7 +2,7 @@
 
 Official website for the AgentSearch Workshop: The First Workshop on Indexing, Retrieval, and Ranking of AI Agents at SIGIR 2026 in Melbourne, Australia.
 
-🌐 **Live Site:** [https://agent-search.github.github.io/agentsearch-sigir26/](https://agent-search.github.github.io/agentsearch-sigir26/)
+🌐 **Live Site:** [https://agent-search.github.io/agentsearch-sigir26/](https://agent-search.github.io/agentsearch-sigir26/)
 
 ## 📋 Overview
 
